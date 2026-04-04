@@ -593,25 +593,44 @@
 
   .print-btn:hover { background: #dbeafe; border-color: var(--gold); }
 
- @media print {
+@media print {
     .top-bar, .print-btn { display: none !important; }
-
     body { background: #fff !important; }
-
     .student-view {
       display: block !important;
       padding: 16px !important;
+      align-items: unset !important;
     }
-
     .feedback-card {
       box-shadow: none !important;
       border: none !important;
       max-width: 100% !important;
       padding: 20px !important;
     }
-    .print-btn { display: none !important; }
-    .top-bar { display: none !important; }
-    .nota-badge { display: flex !important; }
+    .nota-badge {
+      display: flex !important;
+      background: #1a1a2e !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .feedback-text {
+      background: #f0f4ff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .criterios-view .crit-row {
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    .print-footer {
+      display: block !important;
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.75rem;
+      color: #6b6b7b;
+      text-align: center;
+    
+  }
 
     /* Print-friendly nota badge */
     .nota-badge {
